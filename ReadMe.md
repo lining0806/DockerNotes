@@ -12,13 +12,13 @@ lining0806@gmail.com
 
 与虚拟机不同，Docker不需要我们在宿主机上重新安装一个操作系统，它依赖于宿主机环境，这样大大节省了程序部署及运行所需要的空间和时间。而Docker容器内的操作，也完全影响不到宿主机，更不会影响到其他容器。
 
-![](Containers_Vs_VMs.png) 
+![](./pics/Containers_Vs_VMs.png) 
 
 Docker主要由几部分组成：**客户端**，**服务端**，**远程仓库**。Docker采用了C/S架构，用户通过在本地客户端，访问远程服务端的守护进程，从而操纵容器。
 
 容器是通过镜像来创建的，而镜像保存在仓库中。需要注意的是，容器类似于会话，只不过它的操作仅仅限于容器内部，而镜像类似于操作系统，我们可以通过操作系统创建多个会话，类似的，**通过一个镜像可以创建多个容器**。
 
-![](Docker_Achitecture.png) 
+![](./pics/Docker_Achitecture.png) 
 
 对于Ubuntu Linux操作系统，Docker要求是**64位**操作系统，如Ubuntu Trusty 14.04 (LTS)，并且内核发行号最低要求3.10。
 在安装前需要检查内核发型号：**uname -a**
@@ -62,7 +62,7 @@ Docker主要由几部分组成：**客户端**，**服务端**，**远程仓库*
 	
 	docker version
 
-![](version.png) 
+![](./pics/version.png) 
 	
 运行hello-world镜像：
 	
@@ -70,6 +70,6 @@ Docker主要由几部分组成：**客户端**，**服务端**，**远程仓库*
 	
 	这里，Docker会首先检查本地是否存在hello-world镜像，如果没有，则从Docker Hub上拉取，再运行
 
-![](helloworld.png) 
+![](./pics/helloworld.png) 
 
 关于Docker命令，有很多，直接输入**docker help**可以查看，讲的很清楚。一起来体验Docker吧~
