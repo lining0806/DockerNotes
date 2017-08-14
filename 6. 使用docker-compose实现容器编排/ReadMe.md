@@ -34,7 +34,7 @@ app.py
 	from flask import Flask
 	from redis import Redis
 	app = Flask(__name__)
-	redis = Redis(host='redis', port=6379) # redis对应redis容器的别名
+	redis = Redis(host='redis', port=6379) # ''中的redis对应服务名
 	@app.route('/')
 	def hello():
 		count = redis.incr('hits')
